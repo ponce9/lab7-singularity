@@ -10,6 +10,6 @@
 
 module load singularity
 
-#gzip -d ./zebrafish.1.protein.faa.gz
+gzip -d ./zebrafish.1.protein.faa.gz
 
 singularity exec blast_2.9.0--pl526h3066fca_4.sif makeblastdb -in zebrafish.1.protein.faa -dbtype prot | blastp -query P04156.fasta -db zebrafish.1.protein.faa -out results-blast.txt
